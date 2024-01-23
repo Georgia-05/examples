@@ -28,12 +28,14 @@ void print(int numbers[100]) {
 
 // add your solution here
 void solve(int numbers[100]) {
-  // long int temp = 0;
+  long int result = 0;
+  long int temp = 0;
   long int sum = 0;
   for(int i = 0; i < 100; i++){
-    while((numbers[i] /3 - 2)  >= 0) {
-      numbers[i] = (numbers[i] / 3) - 2;
-      sum += numbers[i];
+    while((numbers[i] / 3 - 2) >= 0) {
+      temp = (numbers[i] / 3) - 2;
+      sum += temp;
+      numbers[i] = temp;
     }
   }
   printf("result = %ld\n", sum);  
