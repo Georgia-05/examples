@@ -1,24 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
-You need you to find the two entries that sum to 2020 and then multiply those two numbers together.
-
-For example, suppose your expense report contained the following:
-
-* 1721
-* 979
-* 366
-* 299
-* 675
-* 1456
-In this example list, the two entries that sum to 2020 are 1721 and 299. Multiplying them together produces 1721 * 299 = 514579, so the correct answer is 514579.
-
-Open the file 1_2020.txt which contains 200 numbers, and find the two entries that sum to 2020; what do you get if you multiply them together?
-
-NOTE: The part that reads the file is already written for you. You need to add your solution in the solve(int[200]) function.
-*/
-
 // print all the numbers 
 void print(int numbers[100]) {
     for (int n = 0; n < 100; n++) {
