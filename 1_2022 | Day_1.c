@@ -24,13 +24,24 @@ void solve(int numbers[SIZE]) {
     // printf("i = %d j = %d numbers[%d] = %d\n", i, j, i, numbers[i]);
     sum[j] += numbers[i];
   }
-  int max = sum[0];
+  int max = sum[0], second = sum[1], third = sum[2];
   for (int n = 1; n < j; n++) {
     if (sum[n] > max) {
       max = sum[n];
     }
   }
-  printf("max = %d\n", max);
+  for (int n = 2; n < j; n++) {
+    if (sum[n] > second && sum[n] != max) {
+      second = sum[n];
+    }
+  }
+  for (int n = 3; n < j; n++) {
+    if (sum[n] > third && sum[n] != max && sum[n] != second) {
+      third = sum[n];
+    }
+  }
+  int total = max + second + third;
+  printf("total = %d\n", total);
 }
 int main() {
   FILE *file;
