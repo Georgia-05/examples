@@ -24,6 +24,14 @@ void solve(int numbers[SIZE]) {
     // printf("i = %d j = %d numbers[%d] = %d\n", i, j, i, numbers[i]);
     sum[j] += numbers[i];
   }
+  // int max = sum[0], second = 0, third = 0;
+  // for (int n = 1; n < j; n++) {
+  //   if (sum[n] > max) {
+  //     third = second;
+  //     second = max;
+  //     max = sum[n];
+  //   }
+  // }
   int max = sum[0], second = sum[1], third = sum[2];
   for (int n = 1; n < j; n++) {
     if (sum[n] > max) {
@@ -40,6 +48,7 @@ void solve(int numbers[SIZE]) {
       third = sum[n];
     }
   }
+  printf("max = %d second = %d third = %d\n", max, second, third);
   int total = max + second + third;
   printf("total = %d\n", total);
 }
@@ -67,7 +76,7 @@ int main() {
   }
 
   // print all the numbers for to check if they were read correctly
-  print(numbers);
+  // print(numbers);
 
   // TODO: add your solution here
   solve(numbers);
